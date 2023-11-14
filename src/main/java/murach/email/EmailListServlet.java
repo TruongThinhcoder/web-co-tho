@@ -9,6 +9,7 @@ public class EmailListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         String url = "/index.html";
 // get current action
         String action = request.getParameter("action");
@@ -45,4 +46,5 @@ public class EmailListServlet extends HttpServlet {
             throws ServletException, IOException {
         doPost(request, response);
     }
+
 }
